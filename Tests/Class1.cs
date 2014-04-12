@@ -1,4 +1,5 @@
-﻿using DomainChecker.Core;
+﻿using System;
+using DomainChecker.Core;
 using NUnit.Framework;
 
 namespace Tests
@@ -18,6 +19,13 @@ namespace Tests
         {
             var checker = new BlogspotChecker();
             Assert.False(checker.Check("sergeipopov"));
+        }
+
+        [Test]
+        public void Wordpress()
+        {
+            var checker = new Wordpress();
+            Console.WriteLine(checker.Check("anna"));
         }
     }
 }
