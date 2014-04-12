@@ -12,5 +12,12 @@ namespace Tests
             var checker = new ThumbrChecker();
             Assert.True(checker.Check("tasest234"));
         }
+
+        [Test]
+        public void BlogSpot()
+        {
+            var checker = new BlogspotChecker();
+            Assert.False(checker.Check("sergeipopov"));
+        }
     }
 }
